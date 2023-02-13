@@ -82,12 +82,16 @@ public class Main {
                         break;
                     case 4:
                         if(!isNext){
-                            itr.next();
-                            itr.remove();
+                            if(itr.hasNext()) {
+                                itr.next();
+                                itr.remove();
+                            }
                         }
                         else{
-                            itr.previous();
-                            itr.remove();
+                            if(itr.hasPrevious()) {
+                                itr.previous();
+                                itr.remove();
+                            }
                         }
                         break;
                     case 5:
