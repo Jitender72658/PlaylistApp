@@ -68,12 +68,16 @@ public class Main {
                     case 3:
                         System.out.println("Now playing: ");
                         if(!isNext){
-                            System.out.println(itr.next());
-                            isNext = true;
+                            if(itr.hasNext()) {
+                                System.out.println(itr.next());
+                                isNext = true;
+                            }
                         }
-                        else{
-                            System.out.println(itr.previous());
+                        else {
+                            if (itr.hasPrevious()) {
+                                System.out.println(itr.previous());
                             isNext = false;
+                          }
                         }
                         break;
                     case 4:
